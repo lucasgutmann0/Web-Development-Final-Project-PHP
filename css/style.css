@@ -1,0 +1,356 @@
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  color: white;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background: rgba(39, 39, 42, 1);
+  height: 100%;
+  color: white;
+  min-height: 100vh;
+}
+
+.main-container {
+  min-height: 100vh;
+  padding-inline: 30px;
+  padding-top: 60px;
+  overflow-x: hidden;
+  /* color: white; */
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero .content {
+  z-index: 60;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: #c8c8c8;
+}
+
+.hero .overlay {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(39, 39, 42, 0.6);
+  height: 100%;
+  width: 100%;
+}
+
+.hero:after {
+  -moz-box-shadow: inset 0 0 10em rgba(10, 10, 10, 1);
+  -webkit-box-shadow: inset 0 0 10em rgba(10, 10, 10, 1);
+  box-shadow: inset 0 0 10em rgba(10, 10, 10, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  content: "";
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.navbar-main {
+  height: 4.2rem;
+  width: 100%;
+  z-index: 100;
+  background: rgba(39, 39, 42, 0.6);
+  filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.7));
+  backdrop-filter: blur(10px);
+  /* background: #d7362b; */
+  color: white;
+  display: flex;
+  top: 0;
+  position: fixed;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bebas Neue", sans-serif !important;
+}
+
+.nav-menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  text-decoration: none;
+  list-style-type: none;
+  transition-duration: 0.2s;
+  transition: all;
+}
+
+.navbar-main a {
+  color: white;
+}
+
+.nav-menu-wrapper a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+textarea:focus,
+input:focus {
+  outline: rgba(0,0,0,0.2);
+}
+
+button {
+  transition: all;
+  transition-duration: 0.3s;
+  font-family: "Raleway", sans-serif;
+  border-radius: 30px;
+  background: #b91c1c;
+  /* color: #c8c8c8; */
+  color: white;
+  font-size: 15px;
+  font: bold;
+  min-width: 10rem;
+  padding-inline: 10px;
+  height: 2.5rem;
+  border: none;
+}
+
+button:hover {
+  background: #9f1717;
+}
+
+form input {
+  width: 100%;
+  height: 1.8rem;
+  padding-inline: 20px;
+  border-radius: 10px;
+  background: rgba(230, 230, 230, 1);
+  border: none;
+}
+
+form label {
+  font-weight: 500;
+}
+
+.close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 40px !important;
+  min-width: 0px;
+  height: 40px !important;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  width: 30px !important;
+  min-width: 0px;
+  height: 30px !important;
+}
+
+.content-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #b91c1c;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 40px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+  background: white;
+  color: black;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #b91c1c;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #b91c1c;
+}
+
+th,
+td {
+  padding-inline: 50px;
+
+  text-align: center;
+}
+
+.modal-wrapper {
+  animation-duration: 1s;
+  animation-name: appearAnim;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(5px);
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  /* width: 100%;
+  height: 50%; */
+}
+
+form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.modal {
+  animation-duration: 1s;
+  animation-name: slideDownAnim;
+  padding: 2rem;
+  width: 42rem;
+  min-height: 30rem;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.3));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.slideUpAnim {
+  animation-duration: 1s;
+  animation-name: slideUpAnim;
+}
+
+.hideAnim {
+  animation-duration: 1s;
+  animation-name: hideAnim;
+}
+
+@keyframes slideUpAnim {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-800px);
+  }
+}
+
+@keyframes slideDownAnim {
+  0% {
+    transform: translateY(-800px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes appearAnim {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes hideAnim {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}

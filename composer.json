@@ -1,0 +1,12 @@
+{
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Db\\": "db/",
+            "App\\": "app/"
+        }
+    }
+}
