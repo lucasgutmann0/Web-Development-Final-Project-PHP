@@ -13,8 +13,10 @@ class PersonController
   {
     $this->connection = Connection::getInstance()->getDbInstance();
   }
-
-  public function getAll()
+  /**
+   * @return string|bool
+   */
+  public function getAll(): string|bool
   {
     $query = $this->connection->prepare("SELECT * FROM persona");
     $query->execute();
@@ -22,8 +24,23 @@ class PersonController
     $json = json_encode($res);
     return $json;
   }
-
-  public function insert($p)
+  /**
+   * @return string|bool
+   * @param mixed $id
+   */
+  public function getOne($id): string|bool
+  {
+    $query = $this->connection->prepare("SELECT * FROM persona WHERE id = ?");
+    $query->execute([$id]);
+    $res = $query->fetch(\PDO::FETCH_ASSOC);
+    $json = json_encode($res);
+    return $json;
+  }
+  /**
+   * @return array
+   * @param mixed $p
+   */
+  public function insert($p): array
   {
     $query = $this->connection->prepare("INSERT INTO persona (nombre, celular, dirección, estrato) VALUES (?,?,?,?)");
     $status = $query->execute([$p['nombre'], $p['celular'], $p['direccion'], $p['estrato']]);
@@ -33,8 +50,26 @@ class PersonController
     ];
     return $res;
   }
-
-  public function destroy($id)
+  /**
+   * @return array
+   * @param mixed $p
+   * @param mixed $id
+   */
+  public function update($p, $id): array
+  {
+    $query = $this->connection->prepare("UPDATE persona SET nombre = ?, celular = ?, dirección = ?, estrato = ? WHERE id = ?");
+    $status = $query->execute([$p['nombre'], $p['celular'], $p['direccion'], $p['estrato'], $id]);
+    $res = [
+      "success" => $status,
+      "rows_affected" => $query->rowCount()
+    ];
+    return $res;
+  }
+  /**
+   * @return array
+   * @param mixed $id
+   */
+  public function destroy($id): array
   {
     $query = $this->connection->prepare("DELETE FROM persona WHERE persona.id = ?");
     $status = $query->execute([$id]);

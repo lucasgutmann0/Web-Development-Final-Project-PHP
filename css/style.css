@@ -182,7 +182,7 @@ button:hover {
   background: #9f1717;
 }
 
-form input {
+form input, select {
   width: 100%;
   height: 1.8rem;
   padding-inline: 20px;

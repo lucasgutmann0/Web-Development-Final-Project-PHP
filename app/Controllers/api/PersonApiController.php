@@ -1,4 +1,7 @@
 <?php
+
+namespace App\Controllers\api;
+
 use App\Controllers\PersonController;
 
 // get global variables
@@ -14,6 +17,10 @@ switch ($method) {
     if (count($query) < 2) {
       $persons = $person_controller->getAll();
       echo $persons;
+    } else {
+      $id = explode('=', $query[1])[1];
+      $person = $person_controller->getOne($id);
+      print_r($person);
     }
     break;
   case 'POST':
@@ -41,7 +48,7 @@ switch ($method) {
       echo json_encode($res);
     }
     break;
-    
+
   case 'DELETE':
     // get id from params in path
     $id = explode('=', $query[1])[1];
@@ -68,7 +75,33 @@ switch ($method) {
     }
     break;
   case 'PUT':
-    print_r('PUT REQUEST');
+    // get id from params in path
+    $id = explode('=', $query[1])[1];
+
+    // get body data  body data
+    $reqBody = file_get_contents('php://input');
+    // convert from String to JSON
+    $json = json_decode($reqBody, TRUE);
+    // insert into db
+    $status = $person_controller->update($json, $id);
+
+    // check status of the query
+    if ($status['success'] == true && $status['rows_affected'] > 0) {
+      // change http status code - CREATED
+      http_response_code(200);
+      // create a response message
+      $res = array("message" => "The data was successfully saved");
+      // return message
+      echo json_encode($res);
+    } else {
+      // change http status code - CREATED
+      http_response_code(500);
+      // create a response message
+      $res = array("message" => "The query didn't succeed");
+      // return message
+      echo json_encode($res);
+    }
+
     break;
   case 'PATCH':
     print_r('PATCH REQUEST');
