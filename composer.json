@@ -1,12 +1,14 @@
 {
-    "require": {
-        "vlucas/phpdotenv": "^5.5",
-        "ext-pdo": "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "Db\\": "db/",
-            "App\\": "app/"
-        }
+  "require": {
+    "vlucas/phpdotenv": "^5.5",
+    "ext-pdo": "*",
+    "knplabs/knp-snappy": "^1.4",
+    "dompdf/dompdf": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Db\\": "db/",
+      "App\\": "app/"
     }
+  }
 }

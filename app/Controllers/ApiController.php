@@ -10,7 +10,13 @@ $query = explode('&', $_SERVER['QUERY_STRING']);
 $folder = dirname(__DIR__) . '/Controllers/api/';
 
 $routes = [
-  'personas' => 'PersonApiController.php'
+  'personas' => 'PersonApiController.php',
+  'autos' => 'CarApiController.php',
+  'trabajadores' => 'WorkerApiController.php',
+  'cargos' => 'ChargeApiController.php',
+  'orden_de_trabajo' => 'WorkOrderApiController.php',
+  'detalle_orden_de_trabajo' => 'WorkOrderDetailApiController.php',
+  'estados' => 'StatusApiController.php'
 ];
 
 // simplify path to endpoint - no query
@@ -23,4 +29,3 @@ if (array_key_exists($arr_path[0], $routes)) {
   $res = array("message" => "Couldn't find requested path");
   echo json_encode($res);
 }
-

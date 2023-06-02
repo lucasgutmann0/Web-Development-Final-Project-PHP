@@ -18,18 +18,35 @@ class ComposerStaticInitd84c8f0dc9b11c16481ea3cdd5a42168
             'Symfony\\Polyfill\\Php80\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
+            'Symfony\\Component\\Process\\' => 26,
+            'Svg\\' => 4,
+            'Sabberworm\\CSS\\' => 15,
         ),
         'P' => 
         array (
+            'Psr\\Log\\' => 8,
             'PhpOption\\' => 10,
+        ),
+        'M' => 
+        array (
+            'Masterminds\\' => 12,
+        ),
+        'K' => 
+        array (
+            'Knp\\Snappy\\' => 11,
         ),
         'G' => 
         array (
             'GrahamCampbell\\ResultType\\' => 26,
         ),
+        'F' => 
+        array (
+            'FontLib\\' => 8,
+        ),
         'D' => 
         array (
             'Dotenv\\' => 7,
+            'Dompdf\\' => 7,
             'Db\\' => 3,
         ),
         'A' => 
@@ -51,17 +68,49 @@ class ComposerStaticInitd84c8f0dc9b11c16481ea3cdd5a42168
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
+        'Symfony\\Component\\Process\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/process',
+        ),
+        'Svg\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
+        ),
+        'Sabberworm\\CSS\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/src',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/src',
+        ),
         'PhpOption\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
+        ),
+        'Masterminds\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/masterminds/html5/src',
+        ),
+        'Knp\\Snappy\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-snappy/src/Knp/Snappy',
         ),
         'GrahamCampbell\\ResultType\\' => 
         array (
             0 => __DIR__ . '/..' . '/graham-campbell/result-type/src',
         ),
+        'FontLib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
+        ),
         'Dotenv\\' => 
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
+        ),
+        'Dompdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dompdf/dompdf/src',
         ),
         'Db\\' => 
         array (
@@ -76,6 +125,7 @@ class ComposerStaticInitd84c8f0dc9b11c16481ea3cdd5a42168
     public static $classMap = array (
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Dompdf\\Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
         'PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',

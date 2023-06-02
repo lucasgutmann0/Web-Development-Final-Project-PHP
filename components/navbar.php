@@ -9,6 +9,8 @@
     <li><a href="personas">Personas</a></li>
     <li><a href="autos">Autos</a></li>
     <li><a href="trabajadores">Trabajadores</a></li>
+    <li><a href="orden_de_trabajo">Ord de Trabajo</a></li>
+    <li><a href="cargos">Cargos</a></li>
     <li><a href="registro"><button>registrate</button></a></li>
   </ul>
 </nav>

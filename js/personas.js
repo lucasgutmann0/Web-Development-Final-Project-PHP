@@ -4,7 +4,6 @@ const tableBody = document.querySelector("#personas-table-body");
 const insertForm = document.querySelector("#insert-form");
 const updateForm = document.querySelector("#update-form");
 
-
 // selecting buttons
 const btnInsert = document.querySelector("#add-person-btn");
 const clsBtnInsert = document.querySelector("#close-person-modal-insert");
@@ -93,7 +92,7 @@ function addRowsToTable(data) {
         let cell = row.insertCell(idx);
         cell.innerHTML = item[key];
       });
-      let delBtnCell = row.insertCell(5);
+      let delBtnCell = row.insertCell(keys.length);
       delBtnCell.classList.add("row");
       delBtnCell.innerHTML = `
       <button class='action-btn' onclick='showModalUpdate(${item.id})'>
